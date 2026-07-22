@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Lela dr. Roberto | Valutazione Agenti Fisici</title>
+    <style>
+        :root {
+            --primary: #1e3a8a; /* Blu Scuro Professionale */
+            --secondary: #475569; /* Grigio Ardesia */
+            --accent: #3b82f6; /* Blu Luminoso per dettagli */
+            --dark: #0f172a; /* Grigio quasi nero per testi */
+            --light: #f1f5f9; /* Grigio chiarissimo per lo sfondo */
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 3.5rem 1rem;
+            border-bottom: 5px solid var(--secondary);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+            letter-spacing: 0.5px;
+        }
+        header p {
+            margin: 0.7rem 0 0;
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        container {
+            display: block;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2.5rem 1rem;
+        }
+        section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+            border-left: 4px solid var(--secondary);
+        }
+        section#contatti {
+            border-left-color: var(--accent);
+        }
+        h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.6rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+        li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        li::before {
+            content: "■";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+            top: 2px;
+        }
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            margin-right: 2rem;
+            margin-top: 0.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .contact-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .contact-group {
+            margin-top: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            font-size: 0.9rem;
+            color: var(--secondary);
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Studio Lela dr. Roberto</h1>
+        <p>Servizi Specialistici di Fisica Ambientale e Industriale</p>
+    </header>
+
+    <container>
+        <section id="chi-siamo">
+            <h2>Consulenza Specialistica</h2>
+            <p>Offro competenze qualificate nella misurazione, analisi e valutazione dei rischi derivanti dall'esposizione agli agenti fisici negli ambienti di lavoro e di vita. L'attività garantisce il pieno adempimento degli obblighi normativi vigenti (D.Lgs. 81/08) a tutela della salute e della sicurezza.</p>
+        </section>
+
+        <section id="attivita">
+            <h2>Valutazione Agenti Fisici</h2>
+            <p>Principali ambiti di intervento e rilievi strumentali:</p>
+            <ul>
+                <li><strong>Rumore:</strong> Valutazione del rischio fonometrico in ambiente di lavoro e impatto acustico ambientale.</li>
+                <li><strong>Vibrazioni:</strong> Misurazione delle vibrazioni trasmesse al sistema mano-braccio (HAV) e al corpo intero (WBV).</li>
+                <li><strong>Campi Elettromagnetici (CEM):</strong> Monitoraggio e valutazione dell'esposizione a campi statici, a bassa e ad alta frequenza.</li>
+                <li><strong>Radiazioni Ottiche Artificiali (ROA):</strong> Valutazione delle sorgenti di radiazioni coerenti (laser) e non coerenti.</li>
+            </ul>
+        </section>
+
+        <section id="contatti">
+            <h2>Contatti</h2>
+           
+            <div class="contact-group">
+                <a href="mailto:info@studiolela.it" class="contact-link">✉ info@studiolela.it</a>
+                <a href="tel:+393355921332" class="contact-link">📞 335 5921332</a>
+            </div>
+        </section>
+    </container>
+
+    <footer>
+        <p>&copy; 2026 Studio Lela dr. Roberto. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
