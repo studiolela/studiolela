@@ -1,1 +1,0 @@
-Inserire fonometro.jpg
