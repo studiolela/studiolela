@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dott. Roberto Lela - Fisico, Tecnico Competente in Acustica</title>
+    <style>
+        /* Reset e Stili Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header e Navigazione */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-img {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2f4095;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #1a255c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2f4095, #1d275a);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 850px;
+            margin: 0 auto 30px auto;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #2f4095;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background-color: #f0f4f8;
+            transform: translateY(-2px);
+        }
+
+        /* Sezioni */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: #2f4095;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #2f4095;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Grid Servizi */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-top: 4px solid #2f4095;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card h3 {
+            color: #2f4095;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 8px;
+        }
+
+        .service-card ul {
+            list-style-type: none;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .service-card ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .service-card ul li::before {
+            content: '•';
+            color: #2f4095;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* Callout Box Garanzia Tecnico */
+        .quality-box {
+            background-color: #eef2ff;
+            border-left: 5px solid #2f4095;
+            padding: 25px;
+            border-radius: 6px;
+            margin-top: 40px;
+            color: #2c3e50;
+        }
+
+        .quality-box h4 {
+            color: #2f4095;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Box Contatti */
+        .contact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-item {
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-item strong {
+            color: #2f4095;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: #2f4095;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1d275a;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header con Logo -->
+    <header>
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" alt="dott. Roberto Lela - Tecnico Competente in Acustica e Consulente Sicurezza sul Lavoro" class="logo-img">
+                <ul class="nav-links">
+                    <li><a href="#lo-studio">Lo Studio</a></li>
+                    <li><a href="#servizi">Servizi Specialistici</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Presentazione / Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Consulenza specialistica in Sicurezza sul Lavoro, Acustica ed Agenti Fisici</h1>
+            <p>Supporto tecnico e strumentale per Aziende, Enti Pubblici, Consulenti e Privati. Rilievi con strumentazione certificata sottoposta a taratura SIT.</p>
+            <a href="#contatti" class="btn">Richiedi Informazioni</a>
+        </div>
+    </section>
+
+    <!-- Presentazione Attività -->
+    <section id="lo-studio" class="container">
+        <h2 class="section-title">Lo Studio</h2>
+        <p style="text-align: center; max-width: 850px; margin: 0 auto; color: #4a5568; font-size: 1.05rem; line-height: 1.8;">
+            Lo Studio opera nel settore della consulenza specializzata rivolta ad <strong>Aziende, Enti Pubblici, Consulenti ed a Privati</strong> nell’ambito dell'igiene e della sicurezza dei luoghi di lavoro, dell’acustica ambientale e degli agenti fisici in generale (vibrazioni, ROA, campi elettromagnetici), delle problematiche ambientali, della prevenzione antincendio, della consulenza alla direzione e della formazione del personale.
+        </p>
+
+        <div class="quality-box">
+            <h4>Garanzia di Qualità e Certificazione Tecnica</h4>
+            <p>
+                Tutte le valutazioni in materia di acustica e vibrazioni vengono effettuate e/o coordinate direttamente dal <strong>dott. Roberto Lela, Tecnico Competente in Acustica Ambientale</strong> (riconosciuto con D.P.G.R. del 17/07/2000 n. 203). Lo Studio dispone di <strong>attrezzature idonee regolarmente sottoposte a taratura SIT</strong> per la massima accuratezza dei rilievi. Per le indagini analitiche chimiche, ci avvaliamo della collaborazione di laboratori specializzati con referti firmati da Dottori in Chimica iscritti all'albo.
+            </p>
+        </div>
+    </section>
+
+    <!-- Servizi Dettagliati -->
+    <section id="servizi" style="background-color: #ffffff;">
+        <div class="container">
+            <h2 class="section-title">Servizi Offeriti</h2>
+            <div class="services-grid">
+                
+                <!-- Sicurezza sul Lavoro -->
+                <div class="service-card">
+                    <h3>Sicurezza sul Lavoro (D.Lgs. 81/08)</h3>
+                    <ul>
+                        <li>Consulenza qualificata basata su esperienza decennale.</li>
+                        <li>Valutazione rischio chimico (art. 223 D.Lgs. 81/08).</li>
+                        <li>Valutazione del rischio esposizione al rumore (art. 190 D.Lgs. 81/08).</li>
+                        <li>Valutazione del rischio esposizione alle vibrazioni (art. 202 D.Lgs. 81/08).</li>
+                        <li>Valutazione rischio Radiazioni Ottiche Artificiali - ROA (art. 209 D.Lgs. 81/08).</li>
+                        <li>Valutazione rischio Campi Elettromagnetici (art. 216 D.Lgs. 81/08).</li>
+                    </ul>
+                </div>
+
+                <!-- Misure Ambientali -->
+                <div class="service-card">
+                    <h3>Misure Ambientali & Agenti Fisici</h3>
+                    <ul>
+                        <li><strong>Acustica:</strong> Rilevamento inquinamento acustico da sorgenti fisse/mobili (Legge 447/95), Zonizzazione acustica comunale (Art. 6 L. 447/95)[cite: 1], Valutazioni/previsioni di clima e impatto acustico, e Piani di bonifica rumore/vibrazioni.</li>
+                        <li><strong>Vibrazioni:</strong> Misure in ambiente esterno e confronto con Regolamento Locale di Igiene Tipo.</li>
+                        <li><strong>Elettromagnetismo:</strong> Misure di campo elettrico e magnetico in BF (5 Hz–100 kHz) e AF (100 kHz–3 GHz) secondo D.P.C.M. 08/07/2003. Calcolo DPA (D.M. 29/05/2008).</li>
+                    </ul>
+                </div>
+
+                <!-- Acustica Architettonica -->
+                <div class="service-card">
+                    <h3>Acustica Architettonica</h3>
+                    <ul>
+                        <li>Collaudo e misura dell'isolamento acustico di edifici ed elementi edilizi (UNI EN ISO 717-1, UNI EN ISO 717-2).</li>
+                        <li>Caratterizzazione acustica di locali tramite misura del tempo di riverbero (UNI EN ISO 3382-1, UNI EN ISO 3382-2).</li>
+                        <li>Valutazione previsionale dei requisiti acustici passivi degli edifici (D.P.C.M. 05/12/97 e L.R. 13/08/2001 n. 13).</li>
+                        <li>Controllo dei fenomeni vibratori negli edifici (ISO 2631, UNI 9614).</li>
+                    </ul>
+                </div>
+
+                <!-- Igiene Ambientale ed Industriale -->
+                <div class="service-card">
+                    <h3>Igiene Ambientale ed Industriale</h3>
+                    <ul>
+                        <li>Supporto pratiche autorizzative per collaudo e verifica periodica emissioni in atmosfera.</li>
+                        <li>Indagini ambientali per inquinanti aerodispersi nei luoghi di lavoro (confronto limiti D.Lgs. 81/08 e ACGIH).</li>
+                        <li>Valutazione dell'esposizione personale alle polveri di legno duro.</li>
+                        <li>Valutazione dell'esposizione personale alla silice libera cristallina.</li>
+                        <li>Analisi chimiche svolte tramite laboratorio specializzato.</li>
+                    </ul>
+                </div>
+
+                <!-- Certificazione Macchine e Attrezzature -->
+                <div class="service-card">
+                    <h3>Certificazione Macchine / Attrezzature</h3>
+                    <ul>
+                        <li>Misura delle vibrazioni su impugnatura (ISO 8662/98 e norme di tipologia).</li>
+                        <li>Misura delle vibrazioni su sedile secondo norme tecniche specifiche.</li>
+                        <li>Misura della potenza sonora di macchine ed attrezzature (ISO 3746).</li>
+                        <li>Misura del livello di pressione sonora al posto operatore (UNI EN ISO 11202).</li>
+                    </ul>
+                </div>
+
+                <!-- Formazione e Altri Servizi -->
+                <div class="service-card">
+                    <h3>Formazione e Consulenza Generale</h3>
+                    <ul>
+                        <li>Formazione ed addestramento del personale in materia di igiene e sicurezza sul lavoro.</li>
+                        <li>Consulenza alla direzione aziendale per la gestione della sicurezza.</li>
+                        <li>Supporto per la prevenzione antincendio e risoluzione di problematiche ambientali.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Contatti -->
+    <section id="contatti" class="container">
+        <h2 class="section-title">Contatti</h2>
+        <div class="contact-card">
+            <div class="contact-item">
+                <strong>Studio Tecnico Professionale</strong>
+                <span>dott. Roberto Lela</span><br>
+                <small style="color: #718096;">Tecnico Competente in Acustica Ambientale (D.P.G.R. 17/07/2000 n. 203)</small>
+            </div>
+            <div class="contact-item">
+                <strong>Telefono / Cellulare</strong>
+                <a href="tel:+393355921332">+39 335 5921332</a>
+            </div>
+            <div class="contact-item">
+                <strong>Email</strong>
+                <a href="mailto:roberto@studiolela.it">roberto@studiolela.it</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 dott. Roberto Lela - Tecnico Competente in Acustica & Consulente Sicurezza sul Lavoro</p>
+        </div>
+    </footer>
+
+</body>
+</html>
